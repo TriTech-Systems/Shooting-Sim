@@ -35,3 +35,4 @@ appropriate).
 6. Entire Agreement. This Agreement constitutes the entire agreement with respect to the Confidential Information
 disclosed herein and supersedes all prior or contemporaneous oral or written agreements concerning such Confidential
 Information. This Agreement may only be changed by mutual agreement of authorized representatives of the parties in writing.
+ 
