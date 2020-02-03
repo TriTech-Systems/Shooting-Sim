@@ -3,13 +3,109 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="TEST">
+    <meta name="author" content="TriTech Systems">
 
-    <title>TEST PAGE</title>
-    <link rel="stylesheet" type="text/css" href="/css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Shooting Simulation Phase 1</title>
+    <!--<link rel="stylesheet" type="text/css" href="/css"> -->
+
+    <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
 </head>
 <body>
+<!-- Navigation -->
+<nav class="navbar sticky-top navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Shooting Simulation Selections</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://www.tritechsystem.com/contact/">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!--End of Navigation-->
+<div class="container">
+
+    <!-- Heading Row -->
+    <div class="row align-items-center my-5">
+      <div class="col-lg-7">
+        <img class="img-fluid rounded mb-4 mb-lg-0" src="pictures/Lrrat_Placeholder.jpg" alt="">
+      </div>
+      <!-- /.col-lg-8 -->
+      <div class="col-lg-5">
+        <p>Do not care about about what the targets should be? Press the Ranomize checkbox to mix it up</p>
+        <a class="btn btn-primary" href="#">Randomize Targets</a>
+      </div>
+      <!-- /.col-md-4 -->
+    </div>
+    <!-- /.row -->
+    <div class="row">
+      <div class="col-6 col-sm-3"><div class="container">
+        <form>
+            <label>
+                <div class="form-spacer">targets:</div>
+                <select name="targets">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </label>
+            <br>
+            <label id="reaction-time">
+                <div class="form-spacer">reaction time:</div>
+                <input type="number" name="reaction-time" value="300">
+            </label>
+            <br/>
+        </form>
+        <div class="spacer"></div>
+        <div id="targets">
+            <div class="target blue"></div>
+            <div class="target red"></div>
+            <div class="target red"></div>
+            <div class="target green"></div>
+            <div class="target blue"></div>
+            <div class="target green"></div>
+        </div>
+        </div>
+      </div>
+      <!--COL 2-->
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="randomizeCheckboxBTN">
+        <label class="custom-control-label" for="randomizeCheckboxBTN">Check this to randomize targets</label>
+      </div>
+    
+      <!-- Force next columns to break to new line -->
+      <div class="w-100"></div>
+    </div>
+
+<!--OLD-->
+<!-- <div class="container">
 <form>
     <label>
         <div class="form-spacer">targets:</div>
@@ -38,8 +134,11 @@
     <div class="target blue"></div>
     <div class="target green"></div>
 </div>
+</div> -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="static/js/ws.js">
+</script>
 </body>
 </html>

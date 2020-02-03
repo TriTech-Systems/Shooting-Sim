@@ -26,6 +26,7 @@ func main() {
 
 	// create the routes
 	r.HandleFunc("/", index)
+	r.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 	r.HandleFunc("/ws", ws)
 	r.HandleFunc("/css", css)
 
@@ -65,13 +66,15 @@ func ws(w http.ResponseWriter, r *http.Request) {
 		b:          0,
 		delay:      300,
 	}
+
 	for {
 		_, message, err := c.ReadMessage()
 		// todo catch close messages that appear as errors
 		if err != nil {
-			log.Println("message:", err)
+			log.Println("error:", err)
 			continue
 		}
+		log.Println(string(message))
 		// this makes it behave like an echo server
 		err = c.WriteMessage(1, message)
 		if err != nil {
